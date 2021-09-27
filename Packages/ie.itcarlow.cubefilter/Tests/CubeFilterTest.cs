@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using NUnit.Framework;
-using UnityEngine;
+
 
 namespace Tests
 {
@@ -11,7 +11,7 @@ namespace Tests
         [Test]
         public void CubeFilterSimple()
         {
-            int[] input = { 1, 3, 5, 7, 99, 999 };
+            int[] input = { 1, 3, 5, 7, 9, 999 };
             int[] output = CubeFilter.cubes(input);
             int[] expected = { 1, 27, 125, 343, 729, 997002999 };
 

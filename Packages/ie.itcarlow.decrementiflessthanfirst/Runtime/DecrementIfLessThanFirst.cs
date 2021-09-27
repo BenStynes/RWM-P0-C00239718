@@ -2,15 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DecrementIfLessThanFirst : MonoBehaviour
+public class DecrementIfLessThanFirst
 {
-    int n =5;
-    public void setN(int x)
-    {
-        n = x;
-    }
-
-    public int decrementIfLess(int x)
+ 
+    public static int decrementIfLess(int x,int n)
     {
         if (x < n)
         {
@@ -24,11 +19,8 @@ public class DecrementIfLessThanFirst : MonoBehaviour
         int[] result = new int[xs.Length];
         for (int i = 0; i < xs.Length; i++)
         {
-            if (i == 0)
-            {
-                setN(xs);
-            }
-            result[i] = decrementIfLess(xs[i]);
+            
+            result[i] = decrementIfLess(xs[i],xs[0]);
         }
         return result;
     }
